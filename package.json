@@ -1,0 +1,16 @@
+{
+  "name": "agent-notes",
+  "version": "1.0.0",
+  "description": "A small local-first notes application",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5173 --strictPort",
+    "build": "vite build",
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "vite": "^8.3.0"
+  }
+}

@@ -1,0 +1,286 @@
+:root {
+  color: #20231f;
+  background: #f3f0e9;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(211, 226, 207, 0.8), transparent 38rem),
+    #f3f0e9;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app-shell {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 64px 0 80px;
+}
+
+.app-header,
+.section-heading,
+.note-actions {
+  display: flex;
+  align-items: center;
+}
+
+.app-header {
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 38px;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: #55705a;
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 8px;
+  font-family: Georgia, serif;
+  font-size: clamp(2.5rem, 6vw, 4.75rem);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.intro {
+  margin-bottom: 0;
+  color: #656a62;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.8fr) minmax(360px, 1.2fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.editor-panel,
+.notes-panel {
+  border: 1px solid rgba(42, 50, 40, 0.12);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 18px 48px rgba(55, 60, 50, 0.07);
+  backdrop-filter: blur(12px);
+}
+
+.editor-panel {
+  position: sticky;
+  top: 24px;
+  padding: 28px;
+}
+
+.notes-panel {
+  min-height: 360px;
+  padding: 28px;
+}
+
+h2 {
+  margin-bottom: 24px;
+  font-size: 1.15rem;
+}
+
+.section-heading {
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.section-heading h2 {
+  margin-bottom: 0;
+}
+
+.note-count {
+  color: #777c73;
+  font-size: 0.86rem;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid #c9cdc4;
+  border-radius: 10px;
+  outline: none;
+  background: #fff;
+  color: inherit;
+  padding: 12px 13px;
+  transition: border-color 150ms, box-shadow 150ms;
+}
+
+textarea {
+  resize: vertical;
+  line-height: 1.55;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #55705a;
+  box-shadow: 0 0 0 3px rgba(85, 112, 90, 0.13);
+}
+
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: #a64136;
+}
+
+.error {
+  min-height: 1.15em;
+  margin: 6px 0 0;
+  color: #9e362c;
+  font-size: 0.8rem;
+}
+
+.button {
+  border-radius: 999px;
+  padding: 11px 20px;
+  font-weight: 700;
+}
+
+.button-primary {
+  width: 100%;
+  border: 1px solid #314d37;
+  background: #314d37;
+  color: white;
+}
+
+.button-secondary {
+  border: 1px solid #b9c1b6;
+  background: rgba(255, 255, 255, 0.6);
+  color: #314d37;
+}
+
+.button:hover,
+.button:focus-visible {
+  filter: brightness(0.94);
+}
+
+.empty-state {
+  margin: 80px auto;
+  color: #7a7e76;
+  text-align: center;
+}
+
+.notes-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.note-card {
+  border: 1px solid #dcddd8;
+  border-radius: 14px;
+  background: #fff;
+  padding: 20px;
+}
+
+.note-card h3 {
+  margin-bottom: 10px;
+  font-family: Georgia, serif;
+  font-size: 1.3rem;
+  overflow-wrap: anywhere;
+}
+
+.note-body {
+  margin-bottom: 18px;
+  color: #50554e;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.note-actions {
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+.text-button {
+  border: 0;
+  background: transparent;
+  color: #446049;
+  padding: 3px;
+  font-size: 0.84rem;
+  font-weight: 750;
+}
+
+.text-button.danger {
+  color: #9e362c;
+}
+
+@media (max-width: 720px) {
+  .app-shell {
+    width: min(100% - 24px, 560px);
+    padding: 36px 0 56px;
+  }
+
+  .app-header {
+    align-items: flex-end;
+    margin-bottom: 24px;
+  }
+
+  .intro {
+    max-width: 220px;
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .editor-panel {
+    position: static;
+  }
+
+  .editor-panel,
+  .notes-panel {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 420px) {
+  .app-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .button-secondary {
+    align-self: flex-start;
+  }
+}
