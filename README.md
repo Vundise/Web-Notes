@@ -2,6 +2,7 @@
 # Notes
 
 A small browser-based notes app built with plain HTML, CSS, and JavaScript. Notes are stored locally in the browser with `localStorage`; there is no backend.
+This project is built with automatic Codex agent.
 
 ## Requirements
 
